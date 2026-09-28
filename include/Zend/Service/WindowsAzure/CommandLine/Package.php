@@ -160,9 +160,9 @@ class Zend_Service_WindowsAzure_CommandLine_Package
 		// Build command
 		$command = $cspack;
 		$args = array(
-			$path . '\ServiceDefinition.csdef',
-			implode(' ', $roleArgs),
-			'/out:' . $packageOut
+			escapeshellarg($path . '\ServiceDefinition.csdef'),
+			escapeshellarg(implode(' ', $roleArgs)),
+			escapeshellarg('/out:' . $packageOut)
 		);
 		if ($runDevFabric) {
 			$args[] = '/copyOnly';
