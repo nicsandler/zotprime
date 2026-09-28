@@ -32,7 +32,7 @@ class Zend_Tool_Framework_System_Provider_Phpinfo implements Zend_Tool_Framework
 
     public function showAction()
     {
-        phpinfo();
+
     }
 
 }
